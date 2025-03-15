@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rotatable Cube</title>
+</head>
+<body>
+    <h1>Rotatable Cube</h1>
+    <canvas id="cubeCanvas" width="600" height="400" style="border: 1px solid black;"></canvas>
+    <br>
+    Rotation X: <input type="range" id="rotationX" min="-180" max="180" value="0"><span id="xValue">0</span><br>
+    Rotation Y: <input type="range" id="rotationY" min="-180" max="180" value="0"><span id="yValue">0</span><br>
+    Rotation Z: <input type="range" id="rotationZ" min="-180" max="180" value="0"><span id="zValue">0</span><br>
+
+    <script src="/static/cube.js"></script>
+    <script>
+        document.getElementById('rotationX').addEventListener('input', function() {
+            document.getElementById('xValue').textContent = this.value;
+        });
+
+        document.getElementById('rotationY').addEventListener('input', function() {
+            document.getElementById('yValue').textContent = this.value;
+        });
+
+        document.getElementById('rotationZ').addEventListener('input', function() {
+            document.getElementById('zValue').textContent = this.value;
+        });
+
+    </script>
+</body>
+</html>
